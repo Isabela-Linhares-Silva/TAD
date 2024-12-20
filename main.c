@@ -3,7 +3,7 @@
 
 int main(){
 
-    PPonto a = ponto_cria( 0, 0);
+    PPonto a = cria_ponto( 0, 0);
     printf("( %.2f, %.2f)", a->x, a->y);
 
     free(a);

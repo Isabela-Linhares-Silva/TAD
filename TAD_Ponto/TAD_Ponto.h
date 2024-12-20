@@ -5,6 +5,6 @@ typedef struct ponto{
 }Ponto;
 typedef Ponto * PPonto;
 
-PPonto ponto_cria(float x,float y);
+PPonto cria_ponto(float x,float y);
 
-#include "TAD_Ponto.c";
+#include "TAD_Ponto.c"
