@@ -11,7 +11,12 @@ int main(){
     printf("PONTO 2: ");
     printf("(%.2f, %.2f)\n\n", q->x, q->y);
     float d= distancia_ponto(p,q);
-    printf("A distancia dos pontos eh: %.2f",d);
+    printf("A distancia dos pontos eh: %.2f\n",d);
+    PPonto l=soma_ponto(p,q);
+    printf("Soma x: %.2f",l->x);
+    printf("\nSoma y: %.2f",l->y);
+
+    
     libera_ponto(p);
     libera_ponto(q);
 

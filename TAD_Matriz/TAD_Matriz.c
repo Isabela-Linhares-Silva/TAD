@@ -1,7 +1,7 @@
 #ifndef __TAD_MATRIZ__
     #define __TAD_MATRIZ__
     MMatriz mat_cria(int m,int n){
-        MMatriz mat = (MMatriz) malloc (Matriz);
+        MMatriz mat = (MMatriz) malloc(sizeof(Matriz));
         mat->linha=m;
         mat-> coluna=n;
 
@@ -14,12 +14,12 @@
             }
 
         }
-
+        return mat;//
     }
 
     void mat_libera(MMatriz mat){
-        for(int i=0;i<mat->linhas;i++){
-            free(mat->v(i));
+        for(int i=0;i<mat->linha;i++){
+            free(mat->v[i]);//
         }
         free(mat->v);
         free(mat);
@@ -29,25 +29,16 @@
         return mat->v[i][j];
     }
 
-    void mat_atribui(MMatriz mat,int i,int j){
-
+    void mat_atribui(MMatriz mat,int i,int j,float v){
+        mat->v[i][j]=v;
     }
 
     int mat_linhas(MMatriz mat){
-        return mat->linhas;
+        return mat->linha;
     }
 
     int mat_colunas(MMatriz mat){
-        return mat->colunas;
+        return mat->coluna;
     }
 #endif
 
-
-
-
-for(int i=0;i<a;i++){
-    for(int j=0;j<b;j++){
-        printf("[%d][%d]: |%.2f|",i,j,mat_acessa(mat,a,b))
-    }
-
-}

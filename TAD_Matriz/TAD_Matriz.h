@@ -10,7 +10,7 @@ typedef Matriz* MMatriz;
 MMatriz mat_cria(int m,int n);
 void mat_libera(MMatriz mat);
 float mat_acessa(MMatriz mat, int i,int j);
-void mat_atribui(MMatriz mat,int i,int j);
+void mat_atribui(MMatriz mat,int i,int j,float v);//
 int mat_linhas(MMatriz mat);
 int mat_colunas(MMatriz mat);
 
