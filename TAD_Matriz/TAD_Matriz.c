@@ -40,5 +40,21 @@
     int mat_colunas(MMatriz mat){
         return mat->coluna;
     }
+    MMatriz mat_transposta(MMatriz mat){
+        MMatriz mat_t= mat_cria(mat->coluna,mat->linha);
+        for(int i=0;i<mat->linhas;i++)
+            for(int j=0;j<mat;j++)
+                mat_t->v[i][j]= mat->v[j][i];
+        return mat_t;
+    }
+    //outra maneira
+    /*void mat_transposta(MMatriz mat){
+        MMatriz mat_t= mat_cria(mat->coluna,mat->linha);
+        for(int i=0;i<mat->linhas;i++)
+            for(int j=0;j<mat;j++)
+                mat_t->v[i][j]= mat->v[j][i];
+        mat_libera(mat);
+        mat=mat_t;*/
+    
 #endif
 

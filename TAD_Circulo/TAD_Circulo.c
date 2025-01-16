@@ -2,7 +2,7 @@
     #define __TAD_Circulo_H__
 
 
-    #define PI 3.144159
+    #define PI 3.14159
     CCirculo circ_cria (float x, float y, float raio){
         CCirculo c = (CCirculo) malloc(sizeof(Circulo));
         c->p = cria_ponto(x,y);
