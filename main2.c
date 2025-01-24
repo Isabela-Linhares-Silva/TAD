@@ -1,11 +1,9 @@
 #include<stdio.h>
-#include"TAD_Matriz/TAD_Matriz.h"
+#include "TAD_Circulo 2/TAD_Circulo.h"
 int main(){
-    MMatriz p= mat_cria(2,2);
-    for(int i=0;i<2;i++){
-        for(int j=0;j<2;j++){
-           printf("|%d||%d|: %.2f",i,j,mat_acessa(p,2,2));
-        }
-    }
+    PPontinho o = cria_pontinho(2,3);
+    printf("%f %f\n",o->a, o->b);
+    CCirquinho t= cria_cirquinho(1,2,4);
+    printf("%f %f %f",t->e->a, t->e->b,t->r);
     return 0;
 }
