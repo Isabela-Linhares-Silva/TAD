@@ -14,12 +14,12 @@
             }
 
         }
-        return mat;//
+        return mat;
     }
 
     void mat_libera(MMatriz mat){
         for(int i=0;i<mat->linha;i++){
-            free(mat->v[i]);//
+            free(mat->v[i]);
         }
         free(mat->v);
         free(mat);
